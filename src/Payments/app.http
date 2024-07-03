@@ -1,0 +1,34 @@
+#  GETTING ALL Payments----------------------------------------------------------------
+###
+
+GET http://localhost:8000/Payments
+
+# Getting user by ID
+###
+GET http://localhost:8000/Payments/9
+
+###
+#Deleting user by ID
+DELETE http://localhost:8000/Payments/1
+
+###
+
+POST  http://localhost:8000/Payments
+Content-Type: application/json
+
+ {
+
+    
+  }
+
+
+###
+PUT http://localhost:8000/Payments/1
+Content-Type: application/json
+
+{
+
+  
+}
+    
+

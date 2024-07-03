@@ -1,0 +1,32 @@
+#  GETTING ALL Bookings----------------------------------------------------------------
+###
+
+GET http://localhost:8000/Bookings
+
+# Getting Bookings by ID
+###
+GET http://localhost:8000/Bookings/3
+
+###
+#Deleting Bookings by ID
+DELETE http://localhost:8000/Bookings/3
+
+###
+
+POST  http://localhost:8000/Bookings
+Content-Type: application/json
+
+  {
+  
+   
+  }
+
+###
+PUT http://localhost:8000/Bookings/7
+Content-Type: application/json
+
+  {
+  
+  } 
+
+

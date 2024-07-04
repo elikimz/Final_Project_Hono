@@ -5,7 +5,7 @@ GET http://localhost:8000/Bookings
 
 # Getting Bookings by ID
 ###
-GET http://localhost:8000/Bookings/3
+GET http://localhost:8000/Bookings/21
 
 ###
 #Deleting Bookings by ID
@@ -17,16 +17,29 @@ POST  http://localhost:8000/Bookings
 Content-Type: application/json
 
   {
-  
-   
+    
+    "user_id": 14,
+    "vehicle_id": 6,
+    "location_id": 2,
+    "booking_date": null,
+    "return_date": null,
+    "total_amount": 5000,
+    "booking_status": "Pending"
+    
   }
-
 ###
-PUT http://localhost:8000/Bookings/7
+PUT http://localhost:8000/Bookings/23
 Content-Type: application/json
 
   {
-  
-  } 
-
+    
+    "user_id": 14,
+    "vehicle_id": 6,
+    "location_id": 2,
+    "booking_date": null,
+    "return_date": null,
+    "total_amount": 5000,
+    "booking_status": "Pending"
+    
+  }
 

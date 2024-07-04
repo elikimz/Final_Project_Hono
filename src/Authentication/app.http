@@ -1,0 +1,22 @@
+
+###
+ POST   http://localhost:8000/register
+Content-Type: application/json
+
+{
+  "full_name": "kimkim",
+  "email": "kimkim@example.com",
+  "contact_phone": "07943895949",
+  "address": "00600",
+  "role": "user",
+  "password": "password"
+}
+###
+
+POST    http://localhost:8000/login
+Content-Type: application/json
+
+  {  
+    "full_name": "Faith Kimani",
+    "password": "4028765455"
+  }

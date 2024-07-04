@@ -1,4 +1,4 @@
-import { pgTable, serial, text, varchar, integer, primaryKey,decimal,boolean,timestamp,date} from "drizzle-orm/pg-core";
+import { pgTable, serial, text, varchar, integer, primaryKey,decimal,boolean,timestamp,date,pgEnum} from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 // Users Table
 export const Users = pgTable("users", {
@@ -154,17 +154,21 @@ export const fleetManagementRelations = relations(FleetManagement, ({ one }) => 
 }));
 
 // Authentication Table
-export const Authentication = pgTable("authentication", {
-    auth_id: serial("auth_id").primaryKey(),
-    user_id: integer("user_id").notNull().references(() => Users.id),
+
+export const roleEnum = pgEnum("role", ["admin", "user"])
+export const Auth = pgTable("authentication", {
+    id: serial("auth_id").primaryKey(),
+    user_id: integer("user_id").references(() => Users.id),
     password: varchar("password"),
     created_at: timestamp("created_at").defaultNow(),
     updated_at: timestamp("updated_at").defaultNow(),
+    role: varchar("role", { length: 50 }).default("user"),
+   
 });
 
-export const authenticationRelations = relations(Authentication, ({ one }) => ({
+export const authenticationRelations = relations(Auth, ({ one }) => ({
     user: one(Users, {
-        fields: [Authentication.user_id],
+        fields: [Auth.user_id],
         references: [Users.id],
     }),
 }));
@@ -198,7 +202,8 @@ export type FleetManagementInsert = typeof FleetManagement .$inferInsert;
 export type FleetManagementSelect= typeof  FleetManagement .$inferSelect;
 
 
-
+export type AuthOnUser = typeof Auth.$inferInsert;
+export type authOnUser = typeof Auth.$inferSelect;
 
 
 

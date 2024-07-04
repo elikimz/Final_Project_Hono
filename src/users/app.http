@@ -1,37 +1,28 @@
 #  GETTING ALL Vehicles----------------------------------------------------------------
 ###
 
-GET http://localhost:8000/Vehicles
+GET http://localhost:8000/users
 
 # Getting Vehicles by ID
 ###
-GET http://localhost:8000/Vehicles/3
+GET http://localhost:8000/users/5
 
 ###
 #Deleting Vehicles by ID
-DELETE http://localhost:8000/Vehicles/3
+DELETE http://localhost:8000/users/3
 
 ###
 
-POST  http://localhost:8000/Vehicles
+POST  http://localhost:8000/users
+Content-Type: application/json
+
+  
+
+###
+PUT http://localhost:8000/users/7
 Content-Type: application/json
 
   {
   
-    "vehicleSpec_id": 4,
-    "rental_rate": "4000.00",
-    "availability": true
-  }
-
-###
-PUT http://localhost:8000/Vehicles/7
-Content-Type: application/json
-
-  {
-  
-    "vehicleSpec_id": 4,
-    "rental_rate": "5000.00",
-    "availability": true
+    
   } 
-
-

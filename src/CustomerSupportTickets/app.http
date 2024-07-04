@@ -5,7 +5,7 @@ GET http://localhost:8000/CustomerSupportTickets
 
 # Getting CustomerSupportTickets by ID
 ###
-GET http://localhost:8000/CustomerSupportTickets/9
+GET http://localhost:8000/CustomerSupportTickets/4
 
 ###
 #Deleting CustomerSupportTickets by ID

@@ -52,7 +52,7 @@ export const loginUser = async (c: Context) => {
  
         // Create a payload
         const payload = {
-            sub: userExist.username,
+            sub: userExist.full_name,
             role: userExist.role,
             exp: Math.floor(Date.now() / 1000) + (60 * 180)  // 3 hours => SESSION EXPIRATION
         };
@@ -60,7 +60,7 @@ export const loginUser = async (c: Context) => {
         const token = await sign(payload, secret);  // Create a JWT token
  
         const userResponse = {
-            username: userExist.username,
+            username: userExist.full_name,
             role: userExist.role,
         };
        

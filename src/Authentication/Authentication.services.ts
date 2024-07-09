@@ -7,6 +7,11 @@ export const createAuthUserService = async (user: AuthOnUser): Promise<string | 
     try {
         // Insert into Users table
         const createdUser = await db.insert(Users).values({
+          full_name: user.full_name,
+          email: user.email,
+        contact_phone: user.contact_phone,
+          address: user.address,
+           role: user.role,
            
         }).returning({ id: Users.id });
 
@@ -33,13 +38,13 @@ export const createAuthUserService = async (user: AuthOnUser): Promise<string | 
 };
 
 export const userLoginService = async (user: AuthOnUser) => {
-    const { username, password } = user;
+    const { full_name, password } = user;
     return await db.query.Auth.findFirst({
         columns: {
-            username: true,
+            full_name: true,
             role: true,
             password: true
-        }, where: sql` ${Auth.username} = ${username}`,
+        }, where: sql` ${Auth.full_name} = ${full_name}`,
         with: {
             user: {
                 columns: {

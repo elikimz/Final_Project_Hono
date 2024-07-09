@@ -6,6 +6,6 @@ import { adminRoleAuthorisation } from "../middleware/Authorisation";
 
 usersRouter.get("/users", getAllUsersData)
 usersRouter.get("/users/:id",getOneUserData)
-usersRouter.delete("/users/:id",adminRoleAuthorisation,deleteUsersData)
+usersRouter.delete("/users/:id",deleteUsersData)
 usersRouter.post("/users",InsertUsersData)
 usersRouter.put("/users/:id",updateUsersData)

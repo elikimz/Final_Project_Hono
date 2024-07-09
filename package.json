@@ -10,9 +10,12 @@
     "@hono/zod-validator": "^0.2.2",
     "@types/bcrypt": "^5.0.2",
     "bcrypt": "^5.1.1",
-    "hono": "^4.4.10"
+    "bcryptjs": "^2.4.3",
+    "hono": "^4.4.10",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.11.17",
     "tsx": "^4.7.1"
   }

@@ -1,15 +1,15 @@
-#  GETTING ALL Vehicles----------------------------------------------------------------
+#  GETTING ALL user----------------------------------------------------------------
 ###
 
 GET http://localhost:8000/users
 
-# Getting Vehicles by ID
+# Getting user by ID
 ###
 GET http://localhost:8000/users/5
 
 ###
-#Deleting Vehicles by ID
-DELETE http://localhost:8000/users/3
+#Deleting user by ID
+DELETE http://localhost:8000/users/75
 
 ###
 

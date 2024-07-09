@@ -162,6 +162,7 @@ export const Auth = pgTable("authentication", {
     password: varchar("password"),
     created_at: timestamp("created_at").defaultNow(),
     updated_at: timestamp("updated_at").defaultNow(),
+    username: varchar("username", { length: 90 }),
     role: varchar("role", { length: 50 }).default("user"),
    
 });

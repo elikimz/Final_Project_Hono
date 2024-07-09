@@ -3,7 +3,7 @@
 import { z } from 'zod';
 
 export const registerUserSchema = z.object({
-  full_name: z.string(),
+  username: z.string(),
   email: z.string().email(),
   contact_phone: z.string(),
   address: z.string(),
@@ -12,6 +12,6 @@ export const registerUserSchema = z.object({
 });
 
 export const loginUserSchema = z.object({
-  full_name: z.string(),
+  username: z.string(),
   password: z.string(),
 });

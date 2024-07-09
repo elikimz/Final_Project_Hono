@@ -4,19 +4,20 @@
 Content-Type: application/json
 
 {
-  "full_name": "kimkim",
-  "email": "kimkim@example.com",
-  "contact_phone": "07943895949",
-  "address": "00600",
+  "username": "john ",
+  "email": "john.doe@example.com",
+  "contact_phone": "07943895953",
+  "address": "123 Oak St",
   "role": "user",
-  "password": "password"
+  "password": "newsecurepassword"
 }
+
 ###
 
 POST    http://localhost:8000/login
 Content-Type: application/json
 
   {  
-    "full_name": "Faith Kimani",
-    "password": "4028765455"
+    "username": "john ",
+    "password": "newsecurepassword"
   }

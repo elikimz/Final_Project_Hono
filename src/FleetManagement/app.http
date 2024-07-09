@@ -3,12 +3,12 @@
 
 GET http://localhost:8000/FleetManagement
 
-# Getting user by ID
+# Getting FLEETMANAGEMENT by ID
 ###
 GET http://localhost:8000/FleetManagement/9
 
 ###
-#Deleting user by ID
+#Deleting FLEETMANAGEMENT by ID
 DELETE http://localhost:8000/FleetManagement/1
 
 ###

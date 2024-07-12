@@ -3,6 +3,7 @@ import { Context } from "hono";
 import { createAuthUserService, userLoginService } from "./Authentication.services";
 import * as bycrpt from "bcrypt";
 import { sign } from "hono/jwt";
+import { Users } from "../drizzle/schema";
 
 
 
@@ -41,7 +42,7 @@ export const loginUser = async (c: Context) => {
         } else {
             // create a payload
             const payload = {
-                sub: userExist?.email,
+                sub: userExist?.user,
                 role: userExist?.role,
                 exp: Math.floor(Date.now() / 1000) + (60 * 180)  // 3 hour  => SESSION EXPIRATION
             }

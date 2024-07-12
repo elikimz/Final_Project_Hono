@@ -158,17 +158,13 @@ export const fleetManagementRelations = relations(FleetManagement, ({ one }) => 
 export const roleEnum = pgEnum("role", ["admin", "user"])
 export const Auth = pgTable("authentication", {
     id: serial("auth_id").primaryKey(),
-    user_id: integer("user_id").references(() => Users.id),
+    user_id: integer("user_id").references(() => Users.id,{onDelete:"cascade"}),
     password: varchar("password"),
-    full_name: varchar("full_name", { length: 90 }),
     email: varchar("email", { length: 255 }).unique(),
-    contact_phone: varchar("contact_phone", { length: 20 }),
-    address: text("address"),
+    role: roleEnum("role").default("user"),
     created_at: timestamp("created_at").defaultNow(),
     updated_at: timestamp("updated_at").defaultNow(),
-    role: varchar("role", { length: 50 }).default("user"),
-
-   
+  
 });
 
 export const authenticationRelations = relations(Auth, ({ one }) => ({

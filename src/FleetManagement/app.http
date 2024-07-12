@@ -17,9 +17,16 @@ POST  http://localhost:8000/FleetManagement
 Content-Type: application/json
 
  {
-
+    "id": 4,
+    "vehicle_id": 5,
+    "acquisition_date": 6000,
+    "depreciation_rate": 24455,
+    "current_value": 4000,
+    "maintenance_cost": 300,
+    "status": pending
     
   }
+]
 
 
 ###

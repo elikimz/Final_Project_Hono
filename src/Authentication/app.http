@@ -6,12 +6,12 @@ Content-Type: application/json
 {
 
   
-  "full_name": "johnnn ",
-  "email": "johnndoen@examples.com",
-  "contact_phone": "07943995956",
-  "address": "123 Oahkk St",
-  "role": "user",
-  "password": "newseeccurepasswordd"
+  "full_name": "wairimu elijah Kimani ",
+  "email": "elijahkiimziZ@gmail.com",
+  "contact_phone": "0791337188",
+  "address": "123 kenya",
+  "role": "admin",
+  "password": "123456789"
 }
 
 ###
@@ -20,7 +20,6 @@ POST    http://localhost:8000/login
 Content-Type: application/json
 
   {  
-    "email": "johndoe@examples.com",
-    "password": "newsecurepasswordd"
-    
+    "email": "elijahkiimziZ@gmail.com",
+    "password": "123456789"
   }

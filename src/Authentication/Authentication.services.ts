@@ -1,19 +1,22 @@
-import { Auth, Users,AuthOnUser, authOnUser  } from "../drizzle/schema";
+import { Auth, Users,AuthOnUser, usersInsert  } from "../drizzle/schema";
 import db from "../drizzle/db";
 import { sql } from "drizzle-orm";
 
 
-export const createAuthUserService = async (user: AuthOnUser): Promise<string | null> => {
+export const createAuthUserService = async (user:  usersInsert & { password: string }): Promise<string | null> => {
     try {
         // Insert into Users table
         const createdUser = await db.insert(Users).values({
           full_name: user.full_name,
           email: user.email,
-        contact_phone: user.contact_phone,
+          contact_phone: user.contact_phone,
           address: user.address,
-           role: user.role,
+          role: user.role,
+        
+
+       
            
-        }).returning({ id: Users.id });
+        }).returning({ id: Users.id});
 
         // Ensure the user was created and the id is retrieved
         if (!createdUser || !createdUser[0] || !createdUser[0].id) {
@@ -23,10 +26,11 @@ export const createAuthUserService = async (user: AuthOnUser): Promise<string | 
         const userId = createdUser[0].id;
 
         // Insert into Auth table
-        await db.insert(Auth).values({
+           await db.insert(Auth).values({
+            
             user_id: userId,
             password: user.password,
-            role: user.role,
+            role: user.role === 'user' || user.role === 'admin' ? user.role : 'user',
        
         });
 
@@ -37,20 +41,21 @@ export const createAuthUserService = async (user: AuthOnUser): Promise<string | 
     }
 };
 
+
 export const userLoginService = async (user: AuthOnUser) => {
-    const { full_name, password } = user;
+    const { email,password } = user;
     return await db.query.Auth.findFirst({
         columns: {
-            full_name: true,
+            email: true,
             role: true,
             password: true
-        }, where: sql` ${Auth.full_name} = ${full_name}`,
+        }, where: sql` ${Auth.email} = ${email}`,
         with: {
             user: {
                 columns: {
                     full_name: true,
                     contact_phone: true,
-                    // address: true,
+                   address: true,
                     id: true
                 }
             }

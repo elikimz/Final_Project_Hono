@@ -9,7 +9,7 @@ GET http://localhost:8000/users/5
 
 ###
 #Deleting user by ID
-DELETE http://localhost:8000/users/75
+DELETE http://localhost:8000/users/14
 
 ###
 

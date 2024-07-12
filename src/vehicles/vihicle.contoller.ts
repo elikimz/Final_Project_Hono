@@ -29,9 +29,7 @@ export const InsertVehiclesData =async(c: Context)=>{
 
     try{
         const data=await c.req.json();
-        // const password=data.password;
-        // const hashedPassword=await bcrypt.hash(password,10);
-        // data.password = hashedPassword ;
+        
         const result = await insertVehicles(data);
         return c.json(result,200)
     }catch(err) {

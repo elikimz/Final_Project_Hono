@@ -31,6 +31,7 @@ export const createAuthUserService = async (user:  usersInsert & { password: str
             user_id: userId,
             password: user.password,
             role: user.role === 'user' || user.role === 'admin' ? user.role : 'user',
+            email:user.email
        
         });
 

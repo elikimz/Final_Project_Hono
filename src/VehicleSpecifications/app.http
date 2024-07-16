@@ -5,7 +5,7 @@ GET http://localhost:8000/vehicalspecification
 
 # Getting user by ID
 ###
-GET http://localhost:8000/vehicalspecification/1
+GET http://localhost:8000/vehicalspecification/22
 
 ###
 #Deleting user by ID
@@ -34,7 +34,7 @@ Content-Type: application/json
 
 
 ###
-PUT http://localhost:8000/vehicalspecification/5
+PUT http://localhost:8000/vehicalspecification/1
 Content-Type: application/json
 
 {

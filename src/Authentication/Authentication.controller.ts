@@ -17,7 +17,7 @@ export const registerUser = async (c: Context) => {
         const hashedPassword = await bycrpt.hash(pass, 10);
         user.password = hashedPassword;
         const createdUser = await createAuthUserService(user);
-        if (!createdUser) return c.text("User not created", 404);
+        if (!createdUser) return c.text("User exit do you want to login?", 404);
         return c.json({ msg: createdUser }, 201);
 
     } catch (error: any) {

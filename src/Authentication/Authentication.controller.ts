@@ -64,10 +64,3 @@ export const loginUser = async (c: Context) => {
 }
 
 
-// export const getOneUserData =async(c: Context)=>{
-//     const id = c.req.param("id");
-//     const data=await getOneUsers(Number(id))
-//     return c.json(data,200)
-
-
-// }

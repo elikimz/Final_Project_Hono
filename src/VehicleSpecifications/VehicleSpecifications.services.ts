@@ -1,10 +1,23 @@
 import { eq } from "drizzle-orm";
 import db from "../drizzle/db";
-import { VehicleSpecifications,VehicleSpecificationsInsert,VehicleSpecificationsSelect} from "../drizzle/schema";
+import { Vehicles, VehicleSpecifications,VehicleSpecificationsInsert,VehicleSpecificationsSelect} from "../drizzle/schema";
 
 
 export const getAllvehicalspecification = async (): Promise<VehicleSpecificationsSelect[] | null> => {
-    return await db.query.VehicleSpecifications.findMany()
+    return await db.query.VehicleSpecifications.findMany({
+        with:{
+            vehicles: {
+                 columns:{
+                     id: true,
+                     vehicleSpec_id: true,
+                     rental_rate: true,
+                     availability: true,
+                    //  created_at: true,
+                    //  updated_at: true,
+                 }
+            },
+        }
+    })
 }
 export const getOnevehiclespecification= async (id:number):Promise<VehicleSpecificationsSelect | undefined> =>{
     

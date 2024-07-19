@@ -26,7 +26,8 @@ Content-Type: application/json
   "transmission": "Automatic",
   "seating_capacity": 5,
   "color": "White",
-  "features": "Standard"
+  "features": "Standard",
+  "image_url":"https://www.tesla.com/sites/default/files/modelsx-new/social/model-s-hero-social.jpg"
 }
 
 

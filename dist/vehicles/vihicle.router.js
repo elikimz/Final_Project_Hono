@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VehiclesRouter = exports.usersRouter = void 0;
+const hono_1 = require("hono");
+const vihicle_contoller_1 = require("./vihicle.contoller");
+exports.usersRouter = new hono_1.Hono();
+exports.VehiclesRouter = new hono_1.Hono();
+exports.VehiclesRouter.get("/Vehicles", vihicle_contoller_1.getAllVehiclesData);
+exports.VehiclesRouter.get("/Vehicles/:id", vihicle_contoller_1.getOneVehiclesData);
+exports.VehiclesRouter.delete("/Vehicles/:id", vihicle_contoller_1.deleteVehiclesData);
+exports.VehiclesRouter.post("/Vehicles", vihicle_contoller_1.InsertVehiclesData);
+exports.VehiclesRouter.put("/Vehicles/:id", vihicle_contoller_1.updateVehiclesData);

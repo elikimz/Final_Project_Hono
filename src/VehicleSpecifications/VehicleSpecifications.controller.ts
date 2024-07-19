@@ -5,11 +5,13 @@ import {  Insertvehiclespecification,  deleteAllvehicalspecification, getAllvehi
 export const getAllvehicalspecificationData = async(c: Context) => {
     try {
         const data = await getAllvehicalspecification()
+        console.log('hey')
         return c.json(data, 200)
     } catch (err) {
         return c.json({ "message": err },500)
     }
 }
+
 export const getOnevehicalspecificationData =async(c: Context)=>{
     const id = c.req.param("id");
     const data=await getOnevehiclespecification(Number(id))

@@ -29,8 +29,8 @@ export const VehicleSpecifications = pgTable("vehicle_specifications", {
     seating_capacity: integer("seating_capacity"),
     color: varchar("color", { length: 50 }),
     features: text("features"),
+    image_url: varchar("image_url", { length: 255 }), // Add image_url field
 });
-
 export const vehicleSpecificationsRelations = relations(VehicleSpecifications, ({ many }) => ({
     vehicles: many(Vehicles),
   

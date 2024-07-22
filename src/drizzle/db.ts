@@ -19,7 +19,7 @@
 
 // export default db;  //export the drizzle instance
 
-
+import Stripe from "stripe";
 
 import "dotenv/config";
 import { drizzle } from "drizzle-orm/neon-http";
@@ -33,3 +33,8 @@ export const client =  neon(process.env.Database_URL!)
 const db = drizzle(client, { schema, logger: true })  //create a drizzle instance
  
 export default db;  //export the drizzle instance
+
+export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
+    apiVersion: '2024-06-20',
+    typescript: true,
+  });

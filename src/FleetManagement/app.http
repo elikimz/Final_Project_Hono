@@ -5,7 +5,7 @@ GET http://localhost:8000/FleetManagement
 
 # Getting FLEETMANAGEMENT by ID
 ###
-GET http://localhost:8000/FleetManagement/9
+GET http://localhost:8000/FleetManagement/6
 
 ###
 #Deleting FLEETMANAGEMENT by ID
@@ -17,20 +17,19 @@ POST  http://localhost:8000/FleetManagement
 Content-Type: application/json
 
  {
-    "id": 4,
-    "vehicle_id": 5,
-    "acquisition_date": 6000,
-    "depreciation_rate": 24455,
-    "current_value": 4000,
-    "maintenance_cost": 300,
-    "status": pending
-    
-  }
-]
+  "vehicle_id": 15,
+  "acquisition_date": "2024-07-21", 
+  "depreciation_rate": "2.00", 
+  "current_value":" 4000", 
+  "maintenance_cost": "300",
+  "status": "pending"
+}
+
+
 
 
 ###
-PUT http://localhost:8000/fleetmanagement/1
+PUT http://localhost:8000/fleetmanagement/15
 Content-Type: application/json
 
 {

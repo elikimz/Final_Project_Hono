@@ -1,5 +1,6 @@
 import { Context } from "hono";
 import {  insertFleetManagement, deleteFleetManagement, getAllFleetManagement, getOneFleetManagement, updateFleetManagement } from "./FleetManagement.services";
+import { json } from "stream/consumers";
 
 
 export const getAllFleetManagementData = async(c: Context) => {
@@ -26,15 +27,19 @@ export const deleteFleetManagementData =async(c: Context)=>{
 }
 export const InsertFleetManagementData =async(c: Context)=>{
    
+   
 
     try{
         const data=await c.req.json();
         const result = await insertFleetManagement(data);
         return c.json(result,200)
+        console.log(result)
+        
     }catch(err) {
     
         return c.json({"message":err},400)
     }
+    
 }
 
 

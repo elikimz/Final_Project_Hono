@@ -101,7 +101,7 @@ export const Payments = pgTable("payments", {
     booking_id: integer("booking_id").references(() => Bookings.id),
     amount: decimal("amount", { precision: 10, scale: 2 }),
     payment_status: varchar("payment_status", { length: 50 }).default("Pending"),
-    payment_date: timestamp("payment_date").defaultNow(),
+    payment_date: date("payment_date").defaultNow(),
     payment_method: varchar("payment_method", { length: 50 }),
     transaction_id: varchar("transaction_id", { length: 255 }),
     created_at: timestamp("created_at").defaultNow(),
@@ -161,7 +161,7 @@ export const Auth = pgTable("authentication", {
     user_id: integer("user_id").references(() => Users.id,{onDelete:"cascade"}),
     password: varchar("password"),
     email: varchar("email", { length: 255 }).unique(),
-    role: roleEnum("role").default("user"),
+    role: roleEnum("role"),
     created_at: timestamp("created_at").defaultNow(),
     updated_at: timestamp("updated_at").defaultNow(),
   

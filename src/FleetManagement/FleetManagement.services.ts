@@ -19,6 +19,7 @@ return "deleted successifully"
  
 export const insertFleetManagement= async (data:FleetManagementInsert)=>{
    await db.insert(FleetManagement).values(data)
+   console.log(FleetManagement)
    return "user inserted successifully"
 } 
 

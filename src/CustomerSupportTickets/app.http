@@ -23,12 +23,15 @@ Content-Type: application/json
 
 
 ###
-PUT http://localhost:8000/CustomerSupportTickets/1
+PUT http://localhost:8000/CustomerSupportTickets/4
 Content-Type: application/json
 
 {
 
-  
+    "user_id": 42,
+    "subject": "ghhsdgd",
+    "description": "trt",
+    "status": "kimkim"
 }
     
 

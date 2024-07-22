@@ -6,12 +6,13 @@ Content-Type: application/json
 {
 
   
-  "full_name": "wairimu elijah Kimani ",
-  "email": "elijahkiiimziZ@gmail.com",
+  "full_name": "elijah Kimani ",
+  "email": "elijahkimani1293@gmail.com",
   "contact_phone": "0791337188",
   "address": "123 kenya",
-  "role": "admin",
-  "password": "123456789"
+  "role": "user",
+  "password": "40284433"
+  
 }
 
 ###
@@ -20,6 +21,6 @@ POST    http://localhost:8000/login
 Content-Type: application/json
 
   {  
-    "email": "elijahkiiimziZ@gmail.com",
-    "password": "123456789"
+    "email": "elijahkimani1293@gmail.com",
+    "password": "40284433"
   }

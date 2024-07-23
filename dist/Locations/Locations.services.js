@@ -14,16 +14,16 @@ const getOneLocations = async (id) => {
 exports.getOneLocations = getOneLocations;
 const deleteLocations = async (id) => {
     await db_1.default.delete(schema_1.Locations).where((0, drizzle_orm_1.eq)(schema_1.Locations.id, id));
-    return "deleted successifully";
+    return "Deleted successfully";
 };
 exports.deleteLocations = deleteLocations;
 const insertLocations = async (data) => {
-    await db_1.default.insert(schema_1.Locations).values(data);
-    return "user inserted successifully";
+    const [result] = await db_1.default.insert(schema_1.Locations).values(data).returning(); // Return the inserted row
+    return { message: "Location inserted successfully", id: result.id }; // Return the ID of the inserted location
 };
 exports.insertLocations = insertLocations;
 const updateLocations = async (id, data) => {
     await db_1.default.update(schema_1.Locations).set(data).where((0, drizzle_orm_1.eq)(schema_1.Locations.id, id));
-    return "updated successfully";
+    return "Updated successfully";
 };
 exports.updateLocations = updateLocations;

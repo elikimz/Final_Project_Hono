@@ -17,7 +17,6 @@ POST  http://localhost:8000/Locations
 Content-Type: application/json
 
    {
-    "id": 2,
     "name": "Kutus",
     "address": "00200"
    }

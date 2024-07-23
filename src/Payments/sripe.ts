@@ -1,1 +1,1 @@
-export const ClientURL = "https://final-project-hono.onrender.com/";
+export const ClientURL = "https://final-project-hono.onrender.com";

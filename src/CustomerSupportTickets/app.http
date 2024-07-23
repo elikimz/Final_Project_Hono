@@ -16,6 +16,7 @@ DELETE http://localhost:8000/CustomerSupportTickets/1
 POST  http://localhost:8000/CustomerSupportTickets
 Content-Type: application/json
 
+
  {
 
     

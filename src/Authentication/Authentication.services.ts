@@ -12,7 +12,7 @@ export const createAuthUserService = async (user:  usersInsert & { password: str
           contact_phone: user.contact_phone,
           address: user.address,
           role: user.role,
-          photo_url: user.photo_url,
+          //photo_url: user.photo_url,
         
 
        

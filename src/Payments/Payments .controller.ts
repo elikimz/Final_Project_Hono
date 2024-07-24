@@ -102,7 +102,7 @@ export const createCheckoutSessionController = async (c: Context) => {
             payment_method_types: ['card'],
             line_items,
             mode: 'payment',
-            success_url: `${ClientURL}/SuccessPage`,
+            success_url: `${ClientURL}/Home`,
             cancel_url: `${ClientURL}/payment-canceled`,
         };
 

@@ -111,7 +111,7 @@ const createCheckoutSessionController = async (c) => {
             payment_method_types: ['card'],
             line_items,
             mode: 'payment',
-            success_url: `${sripe_1.ClientURL}/Home`,
+            success_url: `${sripe_1.ClientURL}/SuccessPage`,
             cancel_url: `${sripe_1.ClientURL}/payment-canceled`,
         };
         const session = await stripe.checkout.sessions.create(sessionParams);

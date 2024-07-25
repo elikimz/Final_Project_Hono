@@ -29,12 +29,15 @@ Content-Type: application/json
 
 
 ###
-PUT http://localhost:8000/fleetmanagement/15
+PUT http://localhost:8000/fleetmanagement/39
 Content-Type: application/json
 
-{
-
-  
+ {
+  "vehicle_id": 1,
+  "acquisition_date": "2024-07-21", 
+  "depreciation_rate": "2.00", 
+  "current_value":" 40009", 
+  "maintenance_cost": "300",
+  "status": "pending"
 }
-    
 

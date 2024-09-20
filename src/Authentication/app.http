@@ -1,0 +1,26 @@
+
+###
+ POST   http://localhost:8000/register
+Content-Type: application/json
+
+{
+
+  
+  "full_name": "elijah Kimani ",
+  "email": "wairimuelijah233@gmail.com",
+  "contact_phone": "0791337188",
+  "address": "123 kenya",
+  "role": "admin",
+  "password": "40284433"
+  
+}
+
+###
+
+POST    http://localhost:8000/login
+Content-Type: application/json
+
+  {  
+    "email": "wairimuelijah233@gmail.com",
+    "password": "40284433"
+  }

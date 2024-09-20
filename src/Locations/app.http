@@ -1,0 +1,33 @@
+#  GETTING ALL Locations----------------------------------------------------------------
+###
+
+GET http://localhost:8000/Locations
+
+# Getting Locations by ID
+###
+GET http://localhost:8000/Locations/2
+
+###
+#Deleting Locations by ID
+DELETE http://localhost:8000/Locations/2
+
+###
+
+POST  http://localhost:8000/Locations
+Content-Type: application/json
+
+   {
+    "name": "Kutus",
+    "address": "00200"
+   }
+###
+PUT http://localhost:8000/Locations/2
+Content-Type: application/json
+
+   {
+    
+    "name": "Kutus",
+    "address": "00500",
+    "contact_phone": "079137188"
+   }
+

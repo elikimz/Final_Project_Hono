@@ -1,0 +1,52 @@
+#  vehiclespecification----------------------------------------------------------------
+###
+
+GET http://localhost:8000/vehicalspecification
+
+# Getting user by ID
+###
+GET http://localhost:8000/vehicalspecification/1
+
+###
+#Deleting user by ID
+DELETE http://localhost:8000/vehicalspecifications/1
+
+###
+
+POST  http://localhost:8000/vehicalspecification
+Content-Type: application/json
+
+{
+
+  "manufacturer": "Japan",
+  "model": "Camry",
+  "year": 2020,
+  "fuel_type": "Petrol",
+  "engine_capacity": "2500CC",
+  "transmission": "Automatic",
+  "seating_capacity": 5,
+  "color": "White",
+  "features": "Standard",
+  "image_url":"https://www.tesla.com/sites/default/files/modelsx-new/social/model-s-hero-social.jpg"
+}
+
+
+  
+
+
+###
+PUT http://localhost:8000/vehicalspecification/1
+Content-Type: application/json
+
+{
+
+  "manufacturer": "France",
+  "model": "Peugeot 3008",
+  "year": 2019,
+  "fuel_type": "Diesel",
+  "engine_capacity": "1600CC",
+  "transmission": "Automatic",
+  "seating_capacity": 5,
+  "color": "Black",
+  "features": "Free"
+}

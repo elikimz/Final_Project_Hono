@@ -1,0 +1,36 @@
+#  GETTING ALL USERS----------------------------------------------------------------
+###
+
+GET http://localhost:8000/Vehicles
+
+# Getting user by ID
+###
+GET http://localhost:8000/Vehicles/5
+
+###
+#Deleting user by ID
+DELETE http://localhost:8000/Vehicles/1
+
+###
+
+POST  http://localhost:8000/Vehicles
+Content-Type: application/json
+
+ {
+
+    
+  }
+
+
+###
+PUT http://localhost:8000/Vehicles/5
+Content-Type: application/json
+
+ {
+    "id": 5,
+    "vehicleSpec_id": 1,
+    "rental_rate": "4000.00",
+    "availability": true
+  
+  }
+

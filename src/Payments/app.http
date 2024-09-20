@@ -1,0 +1,36 @@
+#  GETTING ALL Payments----------------------------------------------------------------
+###
+
+GET http://localhost:8000/Payments
+
+# Getting user by ID
+###
+GET http://localhost:8000/Payments/9
+
+###
+#Deleting user by ID
+DELETE http://localhost:8000/Payments/1
+
+###
+
+POST  http://localhost:8000/checkout-session
+Content-Type: application/json
+
+ {
+   "booking_id" : 1,
+   "user_id":"3",
+   "total_amount" :455
+  
+  }
+
+
+###
+PUT http://localhost:8000/Payments/1
+Content-Type: application/json
+
+{
+
+  
+}
+
+ 

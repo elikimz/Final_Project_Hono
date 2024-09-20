@@ -1,0 +1,32 @@
+{
+  "name": "hono_final_project",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "db:generate": "drizzle-kit generate --dialect=postgresql --schema=src/schema.ts --out=./drizzle",
+    "start": "node dist/index.js",
+    "push": "drizzle-kit push "
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.12.2",
+    "@hono/zod-validator": "^0.2.2",
+    "@neondatabase/serverless": "^0.9.4",
+    "@stripe/stripe-js": "^4.4.0",
+    "@types/bcrypt": "^5.0.2",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "drizzle-orm": "^0.32.2",
+    "hono": "^4.5.10",
+    "jsonwebtoken": "^9.0.2",
+    "stripe": "^16.9.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.16.2",
+    "@types/pg": "^8.11.8",
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.23.2",
+    "tsx": "^4.19.0"
+  }
+}

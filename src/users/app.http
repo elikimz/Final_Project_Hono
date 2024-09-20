@@ -1,0 +1,28 @@
+#  GETTING ALL user----------------------------------------------------------------
+###
+
+GET http://localhost:8000/users
+
+# Getting user by ID
+###
+GET http://localhost:8000/users/5
+
+###
+#Deleting user by ID
+DELETE http://localhost:8000/users/14
+
+###
+
+POST  http://localhost:8000/users
+Content-Type: application/json
+
+  
+
+###
+PUT http://localhost:8000/users/7
+Content-Type: application/json
+
+  {
+  
+    
+  } 

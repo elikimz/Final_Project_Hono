@@ -1,0 +1,38 @@
+#  GETTING ALL CustomerSupportTickets----------------------------------------------------------------
+###
+
+GET http://localhost:8000/CustomerSupportTickets
+
+# Getting CustomerSupportTickets by ID
+###
+GET http://localhost:8000/CustomerSupportTickets/4
+
+###
+#Deleting CustomerSupportTickets by ID
+DELETE http://localhost:8000/CustomerSupportTickets/1
+
+###
+
+POST  http://localhost:8000/CustomerSupportTickets
+Content-Type: application/json
+
+
+ {
+
+    
+  }
+
+
+###
+PUT http://localhost:8000/CustomerSupportTickets/4
+Content-Type: application/json
+
+{
+
+    "user_id": 42,
+    "subject": "ghhsdgd",
+    "description": "trt",
+    "status": "kimkim"
+}
+    
+

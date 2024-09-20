@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationsRouter = void 0;
+const hono_1 = require("hono");
+const Locations_controller_1 = require("./Locations.controller");
+exports.LocationsRouter = new hono_1.Hono();
+exports.LocationsRouter.get("/Locations", Locations_controller_1.getAllLocationsData);
+exports.LocationsRouter.get("/Locations/:id", Locations_controller_1.getOneUserData);
+exports.LocationsRouter.delete("/Locations/:id", Locations_controller_1.deleteLocationsData);
+exports.LocationsRouter.post("/Locations", Locations_controller_1.InsertLocationsData);
+exports.LocationsRouter.put("/Locations/:id", Locations_controller_1.updateLocationsData);

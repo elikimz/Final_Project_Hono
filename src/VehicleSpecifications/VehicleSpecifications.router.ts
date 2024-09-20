@@ -6,6 +6,6 @@ export const vehicleSpecificationsRouter=new Hono()
 
 vehicleSpecificationsRouter.get("/vehicalspecification", getAllvehicalspecificationData)
 vehicleSpecificationsRouter.get("/vehicalspecification/:id",getOnevehicalspecificationData)
-vehicleSpecificationsRouter.delete("/vehicalspecifications/:id",deleteAllvehicalspecificationData)
+vehicleSpecificationsRouter.delete("/vehicalspecification/:id",deleteAllvehicalspecificationData)
 vehicleSpecificationsRouter.post("/vehicalspecification",InsertvehicalspecificationData)
 vehicleSpecificationsRouter.put("/vehicalspecification/:id",updatevehicalspecificationData)

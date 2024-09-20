@@ -1,15 +1,15 @@
 #  vehiclespecification----------------------------------------------------------------
 ###
 
-GET http://localhost:8000/vehicalspecification
+GET http://localhost:8000/vehicalspecification/vehicalspecification
 
 # Getting user by ID
 ###
-GET http://localhost:8000/vehicalspecification/1
+GET http://localhost:8000/vehicalspecification/vehicalspecification/1
 
 ###
 #Deleting user by ID
-DELETE http://localhost:8000/vehicalspecifications/1
+DELETE http://localhost:8000/vehicalspecification/vehicalspecification/1
 
 ###
 

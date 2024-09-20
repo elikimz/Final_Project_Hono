@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BookingsRouter = exports.usersRouter = void 0;
+const hono_1 = require("hono");
+const Bookings_controller_1 = require("./Bookings.controller");
+exports.usersRouter = new hono_1.Hono();
+exports.BookingsRouter = new hono_1.Hono();
+exports.BookingsRouter.get("/Bookings", Bookings_controller_1.getAllBookingsData);
+exports.BookingsRouter.get("/Bookings/:id", Bookings_controller_1.getOneBookingsData);
+exports.BookingsRouter.delete("/Bookings/:id", Bookings_controller_1.deleteBookingsData);
+exports.BookingsRouter.post("/Bookings", Bookings_controller_1.InsertBookingsData);
+exports.BookingsRouter.put("/Bookings/:id", Bookings_controller_1.updateBookingsData);

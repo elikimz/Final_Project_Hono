@@ -1,11 +1,10 @@
 import { Hono } from "hono";
-import { deleteUsersData, getAllUsersData,getOneUserData,InsertUsersData,updateUsersData} from "./user.controller";
+import { deleteUsersData, getAllUsersData, getOneUserData, InsertUsersData, updateUsersData } from "./user.controller";
+
 export const usersRouter = new Hono();
-import { adminRoleAuthorisation } from "../middleware/Authorisation";
 
-
-usersRouter.get("/users", getAllUsersData)
-usersRouter.get("/users/:id",getOneUserData)
-usersRouter.delete("/users/:id",deleteUsersData)
-usersRouter.post("/users",InsertUsersData)
-usersRouter.put("/users/:id",updateUsersData)
+usersRouter.get("/", getAllUsersData); // Changed from "/users" to "/" to match the route registration
+usersRouter.get("/:id", getOneUserData);
+usersRouter.delete("/:id", deleteUsersData);
+usersRouter.post("/", InsertUsersData);
+usersRouter.put("/:id", updateUsersData);

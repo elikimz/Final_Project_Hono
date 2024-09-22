@@ -4,8 +4,8 @@ export const usersRouter = new Hono();
 export const vehicleSpecificationsRouter=new Hono()
 
 
-vehicleSpecificationsRouter.get("/vehicalspecification", getAllvehicalspecificationData)
-vehicleSpecificationsRouter.get("/vehicalspecification/:id",getOnevehicalspecificationData)
-vehicleSpecificationsRouter.delete("/vehicalspecification/:id",deleteAllvehicalspecificationData)
-vehicleSpecificationsRouter.post("/vehicalspecification",InsertvehicalspecificationData)
-vehicleSpecificationsRouter.put("/vehicalspecification/:id",updatevehicalspecificationData)
+vehicleSpecificationsRouter.get("/", getAllvehicalspecificationData)
+vehicleSpecificationsRouter.get("/:id",getOnevehicalspecificationData)
+vehicleSpecificationsRouter.delete("/:id",deleteAllvehicalspecificationData)
+vehicleSpecificationsRouter.post("/",InsertvehicalspecificationData)
+vehicleSpecificationsRouter.put("/:id",updatevehicalspecificationData)

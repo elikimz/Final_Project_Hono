@@ -1,19 +1,19 @@
 #  GETTING ALL USERS----------------------------------------------------------------
 ###
 
-GET http://localhost:8000/Vehicles
+GET http://localhost:8000/vehicles
 
 # Getting user by ID
 ###
-GET http://localhost:8000/Vehicles/5
+GET http://localhost:8000/vehicles/5
 
 ###
 #Deleting user by ID
-DELETE http://localhost:8000/Vehicles/1
+DELETE http://localhost:8000/vehicles/3
 
 ###
 
-POST  http://localhost:8000/Vehicles
+POST  http://localhost:8000/vehicles
 Content-Type: application/json
 
  {
@@ -23,7 +23,7 @@ Content-Type: application/json
 
 
 ###
-PUT http://localhost:8000/Vehicles/5
+PUT http://localhost:8000/vehicles/5
 Content-Type: application/json
 
  {

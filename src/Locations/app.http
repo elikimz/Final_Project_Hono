@@ -1,19 +1,19 @@
 #  GETTING ALL Locations----------------------------------------------------------------
 ###
 
-GET http://localhost:8000/Locations
+GET http://localhost:8000/locations
 
 # Getting Locations by ID
 ###
-GET http://localhost:8000/Locations/2
+GET http://localhost:8000/locations/2
 
 ###
 #Deleting Locations by ID
-DELETE http://localhost:8000/Locations/2
+DELETE http://localhost:8000/locations/2
 
 ###
 
-POST  http://localhost:8000/Locations
+POST  http://localhost:8000/locations
 Content-Type: application/json
 
    {
@@ -21,7 +21,7 @@ Content-Type: application/json
     "address": "00200"
    }
 ###
-PUT http://localhost:8000/Locations/2
+PUT http://localhost:8000/locations/2
 Content-Type: application/json
 
    {

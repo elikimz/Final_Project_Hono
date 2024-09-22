@@ -5,8 +5,8 @@ export const VehiclesRouter = new Hono();
 
 
 
-VehiclesRouter.get("/Vehicles", getAllVehiclesData)
-VehiclesRouter.get("/Vehicles/:id",getOneVehiclesData)
-VehiclesRouter.delete("/Vehicles/:id",deleteVehiclesData)
-VehiclesRouter.post("/Vehicles",InsertVehiclesData)
-VehiclesRouter.put("/Vehicles/:id",updateVehiclesData)
+VehiclesRouter.get("/", getAllVehiclesData)
+VehiclesRouter.get("/:id",getOneVehiclesData)
+VehiclesRouter.delete("/:id",deleteVehiclesData)
+VehiclesRouter.post("/",InsertVehiclesData)
+VehiclesRouter.put(":id",updateVehiclesData)

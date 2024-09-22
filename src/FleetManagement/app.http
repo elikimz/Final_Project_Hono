@@ -1,19 +1,19 @@
 #  GETTING ALL FLEETMANAGEMENT----------------------------------------------------------------
 ###
 
-GET http://localhost:8000/FleetManagement
+GET http://localhost:8000/fleetmanagement
 
 # Getting FLEETMANAGEMENT by ID
 ###
-GET http://localhost:8000/FleetManagement/6
+GET http://localhost:8000/fleetmanagement/50
 
 ###
 #Deleting FLEETMANAGEMENT by ID
-DELETE http://localhost:8000/FleetManagement/1
+DELETE http://localhost:8000/fleetmanagement/1
 
 ###
 
-POST  http://localhost:8000/FleetManagement
+POST  http://localhost:8000/fleetmanagement
 Content-Type: application/json
 
  {
@@ -29,7 +29,7 @@ Content-Type: application/json
 
 
 ###
-PUT http://localhost:8000/FleetManagement/50
+PUT http://localhost:8000/fleetmanagement/50
 Content-Type: application/json
 
  {

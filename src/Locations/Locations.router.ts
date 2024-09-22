@@ -3,8 +3,8 @@ import { deleteLocationsData, getAllLocationsData,getOneUserData,InsertLocations
 export const LocationsRouter = new Hono();
 
 
-LocationsRouter.get("/Locations", getAllLocationsData)
-LocationsRouter.get("/Locations/:id",getOneUserData)
-LocationsRouter.delete("/Locations/:id",deleteLocationsData)
-LocationsRouter.post("/Locations",InsertLocationsData)
-LocationsRouter.put("/Locations/:id",updateLocationsData)
+LocationsRouter.get("/", getAllLocationsData)
+LocationsRouter.get("/:id",getOneUserData)
+LocationsRouter.delete("/:id",deleteLocationsData)
+LocationsRouter.post("/",InsertLocationsData)
+LocationsRouter.put("/:id",updateLocationsData)

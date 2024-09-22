@@ -15,15 +15,16 @@ const FleetManagement_router_1 = require("./FleetManagement/FleetManagement.rout
 const Authenitication_router_1 = require("./Authentication/Authenitication.router");
 const app = new hono_1.Hono();
 app.use('/*', (0, cors_1.cors)());
-app.route("/", user_router_1.usersRouter);
-app.route("/", VehicleSpecifications_router_1.vehicleSpecificationsRouter);
-app.route("/", vihicle_router_1.VehiclesRouter);
-app.route("/", Locations_router_1.LocationsRouter);
-app.route("/", Bookings_router_1.BookingsRouter);
-app.route("/", Payments_router_1.PaymentsRouter);
-app.route("/", CustomerSupportTickets_router_1.CustomerSupportTicketsRouter);
-app.route("/", FleetManagement_router_1.FleetManagementRouter);
-app.route("/", Authenitication_router_1.authRouter);
+// Register each router to its specific path
+app.route("/users", user_router_1.usersRouter);
+app.route("/vehiclespecifications", VehicleSpecifications_router_1.vehicleSpecificationsRouter);
+app.route("/vehicles", vihicle_router_1.VehiclesRouter);
+app.route("/locations", Locations_router_1.LocationsRouter);
+app.route("/bookings", Bookings_router_1.BookingsRouter);
+app.route("/payments", Payments_router_1.PaymentsRouter);
+app.route("/customersupport", CustomerSupportTickets_router_1.CustomerSupportTicketsRouter);
+app.route("/fleetmanagement", FleetManagement_router_1.FleetManagementRouter);
+app.route("/auth", Authenitication_router_1.authRouter);
 (0, node_server_1.serve)({
     fetch: app.fetch,
     port: Number(process.env.PORT)

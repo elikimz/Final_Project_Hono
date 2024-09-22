@@ -4,8 +4,8 @@ export const FleetManagementRouter = new Hono();
 
 
 
-FleetManagementRouter.get("/FleetManagement", getAllFleetManagementData)
-FleetManagementRouter.get("/FleetManagement/:id",getOneFleetManagementData)
-FleetManagementRouter.delete("/FleetManagement/:id",deleteFleetManagementData)
-FleetManagementRouter.post("/FleetManagement",InsertFleetManagementData)
-FleetManagementRouter.put("/FleetManagement/:id",updateFleetManagementData)
+FleetManagementRouter.get("/", getAllFleetManagementData)
+FleetManagementRouter.get("/:id",getOneFleetManagementData)
+FleetManagementRouter.delete("/:id",deleteFleetManagementData)
+FleetManagementRouter.post("/",InsertFleetManagementData)
+FleetManagementRouter.put("/:id",updateFleetManagementData)

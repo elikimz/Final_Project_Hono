@@ -5,8 +5,8 @@ export const CustomerSupportTicketsRouter = new Hono();
 
 
 
-CustomerSupportTicketsRouter.get("/CustomerSupportTickets", getAllCustomerSupportTicketsData)
-CustomerSupportTicketsRouter.get("/CustomerSupportTickets/:id",getOneCustomerSupportTicketsData)
-CustomerSupportTicketsRouter.delete("/CustomerSupportTickets/:id",deleteCustomerSupportTicketsData)
-CustomerSupportTicketsRouter.post("/CustomerSupportTickets",InsertCustomerSupportTicketsData)
-CustomerSupportTicketsRouter.put("/CustomerSupportTickets/:id",updateCustomerSupportTicketsData)
+CustomerSupportTicketsRouter.get("/", getAllCustomerSupportTicketsData)
+CustomerSupportTicketsRouter.get("/:id",getOneCustomerSupportTicketsData)
+CustomerSupportTicketsRouter.delete("/:id",deleteCustomerSupportTicketsData)
+CustomerSupportTicketsRouter.post("/",InsertCustomerSupportTicketsData)
+CustomerSupportTicketsRouter.put("/:id",updateCustomerSupportTicketsData)

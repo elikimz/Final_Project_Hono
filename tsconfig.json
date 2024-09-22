@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "CommonJS",
-    "moduleResolution": "Node",
+    "moduleResolution":"Node",
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
@@ -10,7 +10,7 @@
     "forceConsistentCasingInFileNames": true,
     "types": [
       "node"
-    ],
+    ]
     
   },
   "include": ["src/**/*"],

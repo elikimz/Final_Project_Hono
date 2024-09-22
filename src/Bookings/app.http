@@ -1,19 +1,19 @@
 #  GETTING ALL Bookings----------------------------------------------------------------
 ###
 
-GET http://localhost:8000/Bookings
+GET http://localhost:8000/bookings
 
 # Getting Bookings by ID
 ###
-GET http://localhost:8000/Bookings/2
+GET http://localhost:8000/bookings/2
 
 ###
 #Deleting Bookings by ID
-DELETE http://localhost:8000/Bookings/3
+DELETE http://localhost:8000/bookings/3
 
 ###
 
-POST  http://localhost:8000/Bookings
+POST  http://localhost:8000/bookings
 Content-Type: application/json
 
   {
@@ -28,7 +28,7 @@ Content-Type: application/json
     
   }
 ###
-PUT http://localhost:8000/Bookings/23
+PUT http://localhost:8000/bookings/23
 Content-Type: application/json
 
   {

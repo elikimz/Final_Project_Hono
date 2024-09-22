@@ -5,9 +5,9 @@ export const PaymentsRouter = new Hono();
 
 
 
-PaymentsRouter.get("/Payments", getAllPaymentsData)
-PaymentsRouter.get("/Payments/:id",getOnePaymentsData)
-PaymentsRouter.delete("/Payments/:id",deletePaymentsData)
-PaymentsRouter.post("/Payments",insertPaymentsData)
-PaymentsRouter.put("/Payments/:id",updatePaymentsData)
+PaymentsRouter.get("/", getAllPaymentsData)
+PaymentsRouter.get("/:id",getOnePaymentsData)
+PaymentsRouter.delete("/:id",deletePaymentsData)
+PaymentsRouter.post("/",insertPaymentsData)
+PaymentsRouter.put("/:id",updatePaymentsData)
 PaymentsRouter.post('/checkout-session', createCheckoutSessionController)

@@ -4,8 +4,8 @@ export const usersRouter = new Hono();
 export const BookingsRouter=new Hono();
 
 
-BookingsRouter.get("/Bookings", getAllBookingsData)
-BookingsRouter.get("/Bookings/:id",getOneBookingsData)
-BookingsRouter.delete("/Bookings/:id",deleteBookingsData)
-BookingsRouter.post("/Bookings",InsertBookingsData)
-BookingsRouter.put("/Bookings/:id",updateBookingsData)
+BookingsRouter.get("/", getAllBookingsData)
+BookingsRouter.get("/:id",getOneBookingsData)
+BookingsRouter.delete("/:id",deleteBookingsData)
+BookingsRouter.post("/",InsertBookingsData)
+BookingsRouter.put("/:id",updateBookingsData)
